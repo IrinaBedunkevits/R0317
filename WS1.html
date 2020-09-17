@@ -5,9 +5,9 @@
     <title>JavaScript assignment</title>
     <!-- script tag is where Javascript goes to -->
     <script>
-      for (var i = 0; i < 400; i++) {
+      /* for (var i = 0; i < 400; i++) {
         console.log("This round is " + i);
-      }
+      }*/
       // 1. JS output and console
       //alert("Hello world!");
       //alert("Hello world 2!");
@@ -36,10 +36,12 @@
       } else document.write("It seems you're bit underaged.");
       console.log("The order is " + order); */
 
-      /*4. Loops
-
-      */
-
+      /* 4. Loops
+      var arr = [];
+      for (var i = 0; i < 15; i++) {
+        arr.push(Math.random());
+      }
+      console.log(arr); */
       /* 5. Functions walkthrough
       function areYouOldEnough(age) {
         if (age < 18) {
@@ -52,13 +54,22 @@
       alert("You are too young, so " + areYouOldEnough(5));
       alert(areYouOldEnough(25)); */
 
-      // 6. Objects
+      /* 6. Objects
       var person = {
         firstName: "John",
         lastName: "Doe",
-        age: 50,
+        age: 35,
         eyeColor: "blue",
+        adress: "Street 1 house 2",
+        telephone: 0405362745,
       };
+      console.log(person.age);
+      document.write(person.adress);
+      alert(person.firstName + " " + person.lastName); */
+
+      // Independent Exercises 1
+      //1. Dogs age
+      // 2. Debugging a script
     </script>
   </head>
   <body>
