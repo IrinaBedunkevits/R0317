@@ -63,10 +63,143 @@
         eyeColor: "blue",
         adress: "Street 1 house 2",
         telephone: 0405362745,
+        printInfo: function () {
+          return (
+            this.firstName +
+            " " +
+            this.lastName +
+            " " +
+            this.age +
+            " " +
+            this.eyeColor +
+            " " +
+            this.adress +
+            " " +
+            this.telephone
+          );
+        },
       };
       console.log(person.age);
       document.write(person.adress);
-      alert(person.firstName + " " + person.lastName); */
+      alert(person.firstName + " " + person.lastName);
+      console.log(person.printInfo());
+      document.write(person.printInfo()); */
+
+      var person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 35,
+        eyeColor: "blue",
+        adress: "Street 1 house 2",
+        telephone: 0405362745,
+        printInfo: function () {
+          return (
+            this.firstName +
+            " " +
+            this.lastName +
+            " " +
+            this.age +
+            " " +
+            this.eyeColor +
+            " " +
+            this.adress +
+            " " +
+            this.telephone
+          );
+        },
+      };
+
+      var person2 = {
+        firstName: "Juha",
+        lastName: "Tikkanen",
+        age: 25,
+        eyeColor: "blue",
+        adress: "Street 1 house 2",
+        telephone: 0405362745,
+        printInfo: function () {
+          return (
+            this.firstName +
+            " " +
+            this.lastName +
+            " " +
+            this.age +
+            " " +
+            this.eyeColor +
+            " " +
+            this.adress +
+            " " +
+            this.telephone
+          );
+        },
+      };
+
+      var person3 = {
+        firstName: "Joni",
+        lastName: "Malinen",
+        age: 45,
+        eyeColor: "blue",
+        adress: "Street 1 house 2",
+        telephone: 0405362745,
+        printInfo: function () {
+          return (
+            this.firstName +
+            " " +
+            this.lastName +
+            " " +
+            this.age +
+            " " +
+            this.eyeColor +
+            " " +
+            this.adress +
+            " " +
+            this.telephone
+          );
+        },
+      };
+
+      var person4 = {
+        firstName: "Johanna",
+        lastName: "Kuronen",
+        age: 27,
+        eyeColor: "blue",
+        adress: "Street 1 house 2",
+        telephone: 0405362745,
+        printInfo: function () {
+          return (
+            this.firstName +
+            " " +
+            this.lastName +
+            " " +
+            this.age +
+            " " +
+            this.eyeColor +
+            " " +
+            this.adress +
+            " " +
+            this.telephone
+          );
+        },
+      };
+
+      var taulu = [person1, person2, person3, person4];
+      for (i = 0; i < taulu.length; i++) {
+        console.log(taulu[i]);
+      }
+
+      var taulu = [person1, person2, person3, person4];
+      for (i = 0; i < taulu.length; i++) {
+        console.log(taulu[i].firstName);
+      }
+
+      var taulu = [person1, person2, person3, person4];
+      for (i = 0; i < taulu.length; i++) {
+        console.log(taulu[i].firstName + " " + taulu[i].lastName);
+      }
+
+      var taulu = [person1, person2, person3, person4];
+      for (i = 0; i < taulu.length; i++) {
+        console.log(taulu[i].printInfo());
+      }
 
       // Independent Exercises 1
       //1. Dogs age
