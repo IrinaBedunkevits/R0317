@@ -18,7 +18,7 @@
 	document.write("Exercise 2, version 1<br><br>");
 
 	function repeatfunction () {
-		var rep = "Using repeat() method in function right now for 50 times.";
+		var rep = "Using repeat() method in function right now for 50 times.<br>";
 		document.write(rep.repeat(50));
 	}
 	repeatfunction();
@@ -27,11 +27,24 @@
 	document.write("Exercise 2, version 2<br><br>");
 
 	for (var i = 0; i < 50; i++) {
-        document.write("Using for loop for writing this text for the " + i +" time.");
+        document.write("Using for loop for writing this text for the " + i +" time.<br>");
       }
 
 	// Exercise 3
-	
+	document.write("<br>Exercise 3<br><br>");
+	document.write("Kaikki selain tiedot ohessa: "+navigator.userAgent);
+	document.write("<br>Lyhyesti sanottuna käytät " + navigator.appName + " selainta.");
+	document.write("<br>Selaimen versio on: " +navigator.appVersion);
+
+	var browser = navigator.appName;
+
+	if (browser == "Netscape") {
+	window.location.href = "http://mozilla.org";
+	} else window.location.href = "http://www.microsoft.com";
+
+	/*if (user.browser.family === 'Chrome') {
+  	alert('You\'re using the Chrome browser');  
+	}*/
 	// Exercise 4
 	// Exercise 5
 	
