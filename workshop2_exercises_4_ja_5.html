@@ -10,13 +10,19 @@
       }
     </style>
     <!--Exercise 4 -->
-    <h3>I am a student<br /></h3>
-
-    <button onclick="nappifunktio()">OK</button>
-    <button onclick="nappifunktio()">NO</button>
+    <p id="demo"></p>
     <script>
-      <p id="asking"></p>;
-      // Exercise 5
+      function kysyy() {
+        var txt;
+        var r = confirm("Oletko opiskelija?\nPaina joko OK tai PERUUTA.");
+        if (r == true) {
+          txt = "Welcome student!";
+        } else {
+          txt = "Sorry, this page is for students only!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+      }
+      kysyy();
     </script>
   </head>
 </html>
