@@ -24,7 +24,7 @@ var pvm = new Date();
 var html = `
 <style>
 table, tr, td{
-  border: 3px solid red;
+  border: 3px solid green;
   width: 50%;
 }
 
@@ -73,7 +73,21 @@ function showTable(){
   document.write(html);
 };
 
+function showTable2(){
+var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
+	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
+	       "Reagan U. Andrews", "P.O. Box 472, 2271 Mauris Ave","Faroe Islands",
+	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"
+];
+
+for (i = 0; i < persons.length; i++) {
+      document.write(persons[i]);
+}
+};
+
+
 </script>
+
 
 <h1>Workshop 3: JavaScript Events</h1>
 <hr />
@@ -86,7 +100,7 @@ good idea to save the lines of code you write during the exercises for later use
 <p>
   <button onclick="alert('You clicked me! Today is ' + pvm.getDate() + '.' + pvm.getMonth());">Button 1</button>
   <button onclick=showTable();>Button 2</button>
-  <button>Button 3</button>
+  <button onclick=showTable2();>Button 3</button>
 </p>
 
 <ul>
