@@ -17,8 +17,61 @@ table, tr, td{
 
 </style>
 <script>
-  // lisätään 'button1' päivämäärä ja kuukausi kk
+  // lisätään 'button1' päivämäärä ja kuukausi 
 var pvm = new Date();
+
+// toinen nappi
+var html = `
+<style>
+table, tr, td{
+  border: 3px solid red;
+  width: 50%;
+}
+
+</style>
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>$162,700</td>
+            </tr>
+
+        </tbody>
+    </table>
+`;
+function showTable(){
+  document.write(html);
+};
 
 </script>
 
@@ -32,7 +85,7 @@ good idea to save the lines of code you write during the exercises for later use
 <p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons.</p>
 <p>
   <button onclick="alert('You clicked me! Today is ' + pvm.getDate() + '.' + pvm.getMonth());">Button 1</button>
-  <button>Button 2</button>
+  <button onclick=showTable();>Button 2</button>
   <button>Button 3</button>
 </p>
 
