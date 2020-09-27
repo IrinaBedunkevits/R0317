@@ -17,8 +17,14 @@ table, tr, td{
 
 </style>
 <script>
+// get reference to a listener
+var nappi1 = document.getElementById("button1");
+// add
+nappi1.addEventListener("click", clickFunktio);
 
-<!-- JavaScript goes here -->
+function clickFunktio() {
+  alert("You clicked me!");
+}
 
 
 
@@ -33,7 +39,7 @@ good idea to save the lines of code you write during the exercises for later use
 <h2>Exercise 1</h2>
 <p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons.</p>
 <p>
-  <button>Button 1</button>
+  <button id="button1">Button 1</button>
   <button>Button 2</button>
   <button>Button 3</button>
 </p>
