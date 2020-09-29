@@ -38,14 +38,15 @@
 
 	var browser = navigator.appName;
 
-	if (browser == "Mozilla") {
+	/*if (browser == "Mozilla") {
 	window.location.href = "http://mozilla.org";
-	} else window.location.href = "http://www.microsoft.com";
-	// Exercise 4
+	} else window.location.href = "http://www.microsoft.com"; */
+	// Example of navigator.appVersion.indexOf('Chrome')
+	document.write("<br> indexOf Chrome on: "+ navigator.appVersion.indexOf('Chrome'));
 
-
-	// Exercise 5
-	
+	if (navigator.appVersion.indexOf('Chrome') > -1) { // < -1 kun sitä ei ole
+		console.log("Käytät Chromea.");
+	}
 	</script>
 </head>
 
