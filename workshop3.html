@@ -17,7 +17,7 @@ table, tr, td{
 
 </style>
 <script>
-  // lisätään 'button1' päivämäärä ja kuukausi 
+// Excercise 1, lisätään 'button1' päivämäärä ja kuukausi 
 var pvm = new Date();
 
 // toinen nappi
@@ -73,6 +73,8 @@ function showTable(){
   document.write(html);
 };
 
+// kolmas nappi
+
 function showTable2(){
 var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
 	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
@@ -80,11 +82,22 @@ var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde",
 	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"
 ];
 
-for (i = 0; i < persons.length; i++) {
-      document.write(persons[i]);
-}
-};
+// ensimmäinen versio
+document.write("<table border='1'>");
+for (var i = 0; i < persons.length; i+=3) {
+      document.write("<tr><td>"+persons[i]+"</td><td>"+persons[i+1]+"</td><td>"+persons[i+2]+"</td></tr>");
+}};
 
+/* toinen versio (pitää laittaa ylemmän tilalle, jotta näkisit miten se toimii)
+for (var i = 0; i < persons.length; i++) {
+      document.write("<table border='1'><tr><td>" + persons[i]+ "</td></tr></table>");
+}*/ 
+// Exercise 4
+// nappi 4
+// kirjoitetaan konsoliin 'document.getElementsByTagName('button');' ja etsitään sopiva nappi (nappi 4)
+var napit = document.getElementsByTagName('button');
+var nappi = napit[3];
+nappi.addEventListener("click", function(){alert("Hei, tämä on nappi 4.");});
 
 </script>
 
@@ -101,6 +114,7 @@ good idea to save the lines of code you write during the exercises for later use
   <button onclick="alert('You clicked me! Today is ' + pvm.getDate() + '.' + pvm.getMonth());">Button 1</button>
   <button onclick=showTable();>Button 2</button>
   <button onclick=showTable2();>Button 3</button>
+  <button>Button 4</button> <!--Lisätään toiminto kuuntelijan kautta javascriptin avulla, eikä mennä html onclikin kautta.-->
 </p>
 
 <ul>
