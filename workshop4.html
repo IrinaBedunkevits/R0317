@@ -160,27 +160,33 @@ Salary:
   <script>
     // Exercise 1, button 1
     function modifiedHeading() {
-   document.getElementsByTagName('h1');
-   var x = document.getElementsByTagName('h1')[0];
-   x.innerHTML ="Modified Heading!";
+      document.getElementsByTagName('h1');
+      var x = document.getElementsByTagName('h1')[0];
+      x.innerHTML ="Modified Heading!";
     }
     // button2 
     function modifythestyle(){
-    document.getElementsByTagName('h2')[1];
-    var y = document.getElementsByTagName('h2')[1];
-    y.style = ("font-size: 50px; font-style: italic; color:#7FFFD4; background:#5F9EA0;");
+      document.getElementsByTagName('h2')[1];
+      var y = document.getElementsByTagName('h2')[1];
+      y.style = ("font-size: 50px; font-style: italic; color:#7FFFD4; background:#5F9EA0;");
     }
     // button 3
-    /*document.createElement('img');
-    var kuva = document.getElementsByTagName("img")[0];
-    kuva.setAttribute('id','uusiKuva');
-    kuva.src = "https://www.kuvaverkko.fi/wp-content/uploads/2018/10/pkotibg2.png"; */
-
     function appendText() {
       document.body.style = "background : #FAEBD7"
       var z = document.getElementsByTagName('p')[3];
       z.style = "font-style: italic"
       z.innerHTML += " <br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. "       
+      document.createElement('img');
+      var kuva = document.getElementsByTagName("img")[0];
+      kuva.setAttribute('id','uusiKuva');
+      kuva.src = "https://www.kuvaverkko.fi/wp-content/uploads/2018/10/pkotibg2.png";
+      z.appendChild(kuva);
+    }
+    // Exercise 2
+    function hide() {
+    document.getElementById('data');
+    var x = document.getElementById('data');
+    x.style = "display: none";
     }
   </script>
   </body>
