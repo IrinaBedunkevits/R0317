@@ -71,7 +71,7 @@ img {
 <li>When the mouse is moved on top of the image, a colored border should appear surrounding it. On mouse out, border should disappear</li>
 <li>When you have accomplished the above, change the image (id=&quot;carimage&quot;) below based on the users choice on the pulldown menu below. Find appropriate images from the web.
   <p>Select a new car from the list.</p>
-  <select name="mySelect" id="mySelect" onchange="">
+  <select name="mySelect" id="mySelect" onchange="choose()">
     <option value="BMW">BMW         
     <option value="Audi">Audi
     <option value="Mercedes">Mercedes
@@ -170,7 +170,7 @@ Salary:
       var y = document.getElementsByTagName('h2')[1];
       y.style = ("font-size: 50px; font-style: italic; color:#7FFFD4; background:#5F9EA0;");
     }
-    // button 3
+    // button 3, kysy opettajalta onko kuva lisätty oikein
     function appendText() {
       document.body.style = "background : #FAEBD7"
       var z = document.getElementsByTagName('p')[3];
@@ -182,12 +182,33 @@ Salary:
       kuva.src = "https://www.kuvaverkko.fi/wp-content/uploads/2018/10/pkotibg2.png";
       z.appendChild(kuva);
     }
-    // Exercise 2
+    // Exercise 2, First checkbox
     function hide() {
     document.getElementById('data');
     var x = document.getElementById('data');
     x.style = "display: none";
     }
+    // Second checkbox
+    function show() {
+      document.getElementById('data');
+      var x = document.getElementById('data');
+      x.style = "display: block";
+    }
+    // Third checkbox, //kysy opettajalta miksi ei toimi
+    /*
+    document.getElementsByClassName('surprise');
+    var y = document.getElementsByClassName('surprise');
+    var x = y[0].getElementsByClassName('surprise');
+    for(var i = 0; i < x.length; ++i){
+      x[i].style.property = "font-size: 20"  
+    } */
+    // Exercise 3, first
+    function choose() {
+      alert("Valintasi oli " +event.target.value);
+    }
+    // Second
+    
+
   </script>
   </body>
 </html>
