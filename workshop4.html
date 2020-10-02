@@ -45,7 +45,7 @@ img {
 </ul>
 
 <h2>Exercise 2: DOM Traversing using ID's and classes</h2>
-<p class="surprise">Add onchange -events to following checkboxes.</p> <!-- add a logo image here-->
+<p class="surprise">Add onchange -events to following checkboxes.</p>
 <p>
   <label>
     <input onchange="hide()" name="CheckboxGroup1" type="checkbox" id="CheckboxGroup1_0" title="Actions" value="1">
@@ -71,7 +71,7 @@ img {
 <li>When the mouse is moved on top of the image, a colored border should appear surrounding it. On mouse out, border should disappear</li>
 <li>When you have accomplished the above, change the image (id=&quot;carimage&quot;) below based on the users choice on the pulldown menu below. Find appropriate images from the web.
   <p>Select a new car from the list.</p>
-  <select name="mySelect" id="mySelect" onchange="choose()">
+  <select name="mySelect" id="mySelect" onchange="changeImage()">
     <option value="BMW">BMW         
     <option value="Audi">Audi
     <option value="Mercedes">Mercedes
@@ -198,9 +198,9 @@ Salary:
     } 
     }
     // Exercise 3, first
-    function choose() {
+    /*function changeImage() {
       alert("Valintasi oli " +event.target.value);
-    }
+    }*/
     // Second
     function over() {
       document.getElementById('carimage').style = "border: 3px solid blue";
@@ -208,6 +208,25 @@ Salary:
 
     function out() {
       document.getElementById('carimage').style = "border: 0px solid blue";
+    }
+    // Third
+    function changeImage() {
+      var data = document.getElementById('mySelect').value;
+      var image = document.getElementById('carimage');
+    //alert("Your  selection: "+data);
+
+      if (data == "Audi") {
+        image.src = "https://mediaservice.audi.com/media/live/50900/fly1400x601n1/gba/2019.png?wid=850";
+      }
+      else if (data == "BMW") {
+        image.src = "https://www.bmw.in/content/dam/bmw/common/all-models/3-series/sedan/2018/navigation/bmw-3-series-modellfinder.png";
+      }
+      else if (data == "Mercedes") {
+        image.src = "https://www.mercedes-benz.fi/passengercars/_jcr_content/image.MQ6.2.2x.20190401083207.png";
+      }
+      else if (data == "Volvo") {
+        image.src = "https://cdn.tekniikanmaailma.fi/wp-content/uploads/2018/06/s60inscriptionstudio04-e1529508613801-768x400.jpg";
+      }
     }
 
   </script>
