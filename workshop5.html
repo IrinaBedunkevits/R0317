@@ -20,7 +20,8 @@ table, tr, td{
 
 //Exercise #1 A
 function getData() {
-  alert()
+  alert(document.getElementById('form1').value);
+  alert(document.getElementById("form2").value);
 }
 
 </script>
@@ -56,10 +57,10 @@ PowerPoint -slides.</p>
 <form onsubmit="return getData()">
 
 	Email address:<br>
-  <input type="text" name="email">
+  <input id="form1" type="text" name="email">
   <br>
 	Comment:<br>
-  <textarea name="comment"></textarea>
+  <textarea id="form2" name="comment"></textarea>
 	<br>
 <input type="submit" value="Send">
 </form>
