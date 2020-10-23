@@ -86,7 +86,7 @@ img {
     <p class="surprise">You can do neat things by editing CSS-rules via  JavaScript. See the examples in lecture slides. Then try these:</p>
     <ol>
       <li><button onclick="changePosition()">Move!</button>Select the div with an id &quot;carimage&quot; and move it 200px left and 500px down</li>
-      <li><button onclick="setInterval(function(){doMove();},1000); "/>Animate</button> Write a  funtion doMove() which  will move the image across the screen, or even better: back and forth on  the screen. The Interval required has already been added to the onclick -event of the list item.</li>
+      <li><button onclick="setInterval(function(){doMove();},1000);"/ >Animate</button> Write a  funtion doMove() which  will move the image across the screen, or even better: back and forth on  the screen. The Interval required has already been added to the onclick -event of the list item.</li>
       <li><button onclick="setInterval(function(){fadeOut();},250);"/>Fade out!</button> Wite  a function fadeOut() which will slowly decrease the opacity of the image from 1.0 to  0 making it fade out. The Interval required has already been added to the onclick -event of the list item</li>
       <li><button onclick="hide()"/>Disappear! </button>Finally, write JavaScript which will remove the image from the page</li>
     </ol>
@@ -170,13 +170,13 @@ Salary:
       var y = document.getElementsByTagName('h2')[1];
       y.style = ("font-size: 50px; font-style: italic; color:#7FFFD4; background:#5F9EA0;");
     }
-    // button 3, kysy opettajalta onko kuva lisätty oikein
+    // button 3
     function appendText() {
       document.body.style = "background : #FAEBD7"
       var z = document.getElementsByTagName('p')[3];
       z.style = "font-style: italic"
       z.innerHTML += " <br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. "       
-      z.innerHTML += "<img src= 'https://www.kuvaverkko.fi/wp-content/uploads/2018/10/pkotibg2.png'>";
+      z.innerHTML += "<img src= 'https://kotiliesi.fi/wp-content/uploads/2018/04/auringonkukka.jpg'>";
     }
     // Exercise 2, First checkbox
     function hide() {
@@ -190,7 +190,7 @@ Salary:
       var x = document.getElementById('data');
       x.style = "display: block";
     }
-    // Third checkbox, // toimii, liitin sen valintaruudukkoon manuaalisesti, selvitä miten /onchange="surprise()"/ lisätään appendChildin avulla.
+    // Third checkbox
     function surprise() {
     var y = document.getElementsByClassName('surprise');
     for( i = 0; i < y.length; ++i){
@@ -237,7 +237,24 @@ Salary:
     }
     // Item 2
     //Call doMove() function every 1000ms = every 1seconds.
-
+    // Item 4
+    function hide(){
+    document.getElementById('carimage').style.display="none";
+   }
+   // Exercise 5
+   function insertRows(){
+    var table = document.getElementById("data");
+    var row = table.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
+    var name = document.getElementById('textfield').value;
+    var position  = document.getElementById('textfield2').value;
+    var salary = document.getElementById('textfield3').value;
+    cell1.innerHTML = name;
+    cell2.innerHTML = position;
+    cell3.innerHTML = salary;
+    }
   </script>
   </body>
 </html>
